@@ -11,6 +11,7 @@ var AddTodo = React.createClass({
       this.refs.todoText.value = ''
     }
     else {
+      // if data not valid, cursor is placed back to the input
       this.refs.todoText.focus();
     }
   },
