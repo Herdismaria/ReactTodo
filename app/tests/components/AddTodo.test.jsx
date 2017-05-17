@@ -6,7 +6,7 @@ var $ = require('jquery');
 
 var AddTodo = require('AddTodo');
 
-describe('TAddodo', () => {
+describe('AddTodo', () => {
   it('should exist', () => {
     expect(AddTodo).toExist();
   });
