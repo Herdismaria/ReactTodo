@@ -27,10 +27,4 @@ describe('TodoApp', () => {
 
     expect(todoList.length).toEqual(1);
   });
-
-  it('', () => {
-
-  });
-
-  //
 });

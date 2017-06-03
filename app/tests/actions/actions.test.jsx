@@ -12,6 +12,23 @@ describe('Actions', () => {
     expect(res).toEqual(action);
   });
 
+  it('should generate add todos action', () => {
+    var todos: [{
+      id: '111',
+      text: 'anything',
+      completed: false,
+      completedAt: undefined,
+      createdAt: 123
+    }];
+    var action = {
+      type: 'ADD_TODOS',
+      todos
+    };
+
+    var res = actions.addTodos(todos);
+    expect(res).toEqual(action);
+  });
+
   it('should generate add todo action', () => {
     var action = {
       type: 'ADD_TODO',
@@ -22,22 +39,23 @@ describe('Actions', () => {
     expect(res).toEqual(action);
   });
 
+  it('should generate toggle todo action', () => {
+
+    var action = {
+      type: 'TOGGLE_TODO',
+      id: '123'
+    };
+
+    var res = actions.toggleTodo(action.id);
+    expect(res).toEqual(action);
+  });
+
   it('should generate toggle showCompleted action', () => {
     var action = {
       type: 'TOGGLE_SHOW_COMPLETED',
     };
 
     var res = actions.toggleShowCompleted();
-    expect(res).toEqual(action);
-  });
-
-  it('should generate toggle todo action', () => {
-    var action = {
-      type: 'TOGGLE_TODO',
-      id: 2
-    };
-
-    var res = actions.toggleTodo(action.id);
     expect(res).toEqual(action);
   });
 });
